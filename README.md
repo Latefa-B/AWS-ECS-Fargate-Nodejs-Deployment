@@ -14,11 +14,11 @@ In this project, I will walk you through the steps to build, push, deploy, and m
 - Deploy it using a serverless compute engine : Amazon Elastic Container Service (ECS) with Fargate. And set up the required IAM permissions.
 - Monitor and Test the Application with CloudWatch logs and Access it on the Web Browser via Public IP Address.
 
-## Design of the Application’s Architecture on AWS
+### Design of the Application’s Architecture on AWS
 <img width="756" height="647" alt="Screenshot 2025-05-17 at 5 28 33 PM" src="https://github.com/user-attachments/assets/79da3a22-3b5b-4046-95b2-c79c5fbf5c55" />
 
 
-## Workflow of the Application on AWS using EC2, ECR, ECS, IAM and CloudWatch services 
+### Workflow of the Application on AWS using EC2, ECR, ECS, IAM and CloudWatch services 
 <img width="546" height="640" alt="Screenshot 2025-05-18 at 7 48 01 PM" src="https://github.com/user-attachments/assets/27887fbc-b980-4707-980b-02435397e41c" />
 
 ## Phase 1: Set Up EC2 as Your Workstation
