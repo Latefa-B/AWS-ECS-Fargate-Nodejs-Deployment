@@ -47,7 +47,7 @@ In this project, I will walk you through the steps to build, push, deploy, and m
 <img width="847" height="267" alt="7" src="https://github.com/user-attachments/assets/e23a159f-a29c-428a-89f9-916a04db14c8" />
 
 **Step 3: Install Docker & Git**
-Install Docker and Git using those commands : 
+- Install Docker and Git using those commands : 
 sudo yum update -y
 sudo yum install docker git -y
 sudo service docker start
