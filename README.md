@@ -23,25 +23,25 @@ In this project, I will walk you through the steps to build, push, deploy, and m
 
 ## Phase 1: Set Up EC2 as Your Workstation
 **Step 1: Launch EC2 Instance**
-Go to EC2 Console → **Launch Instance**
+- Go to EC2 Console → **Launch Instance**
 <img width="1454" height="383" alt="1" src="https://github.com/user-attachments/assets/beca01f0-f8ea-4e89-95e0-0192fbd4fdfe" />
 
-Name the instance : **lab3-ec2-workstation**
-Specify the OS: **Amazon Linux 2**
+- Name the instance : **lab3-ec2-workstation**
+- Specify the OS: **Amazon Linux 2**
 <img width="1410" height="710" alt="2" src="https://github.com/user-attachments/assets/ac658df1-82f2-4da9-a54f-dcbd181bbbd1" />
 
-Specify the Type : **t2.micro (Free Tier)**
-Specify a Key Pair : **Create new or use existing**
+- Specify the Type : **t2.micro (Free Tier)**
+- Specify a Key Pair : **Create new or use existing**
 <img width="1437" height="600" alt="3" src="https://github.com/user-attachments/assets/21b878cb-48ed-48d6-8225-4af3cea1f429" />
 
-Enable SSH on port 22 : **Check Allow SSH traffic From and specify your IP Address**.
+- Enable SSH on port 22 : **Check Allow SSH traffic From and specify your IP Address**.
 <img width="1408" height="630" alt="4" src="https://github.com/user-attachments/assets/631a7c68-a04e-4dae-99a7-5556b96a5418" />
 
-Click **Launch instance**
+- Click **Launch instance**
 <img width="1460" height="282" alt="5" src="https://github.com/user-attachments/assets/2bfb6f0f-b82c-4c6c-b46a-4fc560057cec" />
 
 **Step 2: Connect to EC2**
-Connect to the EC2 instance using SSH from your terminal : ssh -i "your-key.pem" ec2-user@<your-ec2-public-ip>
+- Connect to the EC2 instance using SSH from your terminal : ssh -i "your-key.pem" ec2-user@<your-ec2-public-ip>
 <img width="1444" height="594" alt="6" src="https://github.com/user-attachments/assets/3a3f335c-84af-4a45-98ae-0bec66307542" />
 
 <img width="847" height="267" alt="7" src="https://github.com/user-attachments/assets/e23a159f-a29c-428a-89f9-916a04db14c8" />
