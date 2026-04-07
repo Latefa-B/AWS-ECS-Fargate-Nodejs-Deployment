@@ -1,18 +1,18 @@
 # Step-by-step guide to Deploy a Node.js App on AWS using ECS Fargate and ECR 
 Deploying a Node.js App on AWS with ECS Fargate and ECR, involves building and deploying a scalable, cost-efficient and secure Application over the Cloud without provisioning or managing any servers. It involves : 
 
-**- Dockerizing and building the Application.**
-**- Pushing it to Amazon ECR for secure storage.**
-**- Deploying the Application and running it in a secure, scalable environment on ECS for orchestrating container deployments.**
-**- Using Fargate with ECS, as a serverless compute engine that manages the underlying infrastructure.**
+- Dockerizing and building the Application.
+- Pushing it to Amazon ECR for secure storage.
+- Deploying the Application and running it in a secure, scalable environment on ECS for orchestrating container deployments.
+- Using Fargate with ECS, as a serverless compute engine that manages the underlying infrastructure.
 
 In this project, I will walk you through the steps to build, push, deploy, and monitor a basic containerized application (Node.js app), using AWS like : **EC2, ECR, ECS, Fargate, IAM and CloudWatch**. I will break down the process in 5 phases. We will see step-by-step, how to : 
 
-**- Set up EC2 as a workstation to build and push a Docker image.**
-**- Build a Docker image.**
-**- Push the image to Amazon private registry : Elastic Container Registry (ECR).**
-**- Deploy it using a serverless compute engine : Amazon Elastic Container Service (ECS) with Fargate. And set up the required IAM permissions.**
-**- Monitor and Test the Application with CloudWatch logs and Access it on the Web Browser via Public IP Address.**
+- Set up EC2 as a workstation to build and push a Docker image.
+- Build a Docker image.
+- Push the image to Amazon private registry : Elastic Container Registry (ECR).
+- Deploy it using a serverless compute engine : Amazon Elastic Container Service (ECS) with Fargate. And set up the required IAM permissions.
+- Monitor and Test the Application with CloudWatch logs and Access it on the Web Browser via Public IP Address.
 
 ### Design of the Application’s Architecture on AWS
 <img width="756" height="647" alt="Screenshot 2025-05-17 at 5 28 33 PM" src="https://github.com/user-attachments/assets/79da3a22-3b5b-4046-95b2-c79c5fbf5c55" />
