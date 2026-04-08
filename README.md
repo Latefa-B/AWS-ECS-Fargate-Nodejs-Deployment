@@ -174,16 +174,16 @@ Now that the Docker image was pushed successfully, let’s deploy the Applicatio
 
 
 - Attach these policies: **AmazonECSTaskExecutionRolePolicy** and **CloudWatchLogsFullAccess**
-
-
-
-- Click **Create role**
 <img width="1446" height="477" alt="8" src="https://github.com/user-attachments/assets/247235a8-04e2-43ee-aed6-a1a92701dff4" />
 
 
-<img width="1437" height="687" alt="10" src="https://github.com/user-attachments/assets/a79dc1d5-9767-4125-80c5-0079b5cc12d7" />
+- Click **Create role**
 <img width="1456" height="717" alt="9" src="https://github.com/user-attachments/assets/c8bad476-daf9-4b01-b594-57773b638cfa" />
-![Uploading 10.png…]()
+<img width="1437" height="687" alt="10" src="https://github.com/user-attachments/assets/a79dc1d5-9767-4125-80c5-0079b5cc12d7" />
+
+
+
+
 
 
 
