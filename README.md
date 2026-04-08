@@ -255,7 +255,7 @@ Now that the Docker image was pushed successfully, let’s deploy the Applicatio
 - Click on  /ecs/lab3-logs and check the last log stream
 <img width="1433" height="492" alt="2" src="https://github.com/user-attachments/assets/14a19e22-c325-460e-bb28-ddbf3205354c" />
 
-**Expected output** : You should see log output : App running on port 3000
+**Expected output** : You should see log output : **App running on port 3000**
 <img width="1429" height="396" alt="3" src="https://github.com/user-attachments/assets/23157252-f487-4f3c-8d04-d5f46714b6b2" />
 
 
