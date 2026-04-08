@@ -86,7 +86,7 @@ Now that Docker and Git are installed successfully on the EC2 Instance, Let’s 
 
 ## Phase 3: Push Image to Amazon ECR
 **Step 6: Create ECR Repository (Console)**
-- Go to ECR → Create Repository
+- Go to ECR → **Create Repository**
 <img width="1420" height="754" alt="1" src="https://github.com/user-attachments/assets/95817760-1ba8-4cef-ac26-bee20702460e" />
 
 - On Amazon ECR → Private registry → Repositories → Specify the settings : 
@@ -101,7 +101,7 @@ Now that Docker and Git are installed successfully on the EC2 Instance, Let’s 
 <img width="1421" height="468" alt="4" src="https://github.com/user-attachments/assets/182a0ec3-585b-40ca-905a-39c8d7a57624" />
 
 **Step 7: Authenticate and Push from EC2**
-In order to be able to authenticate to the ECR registry and Push the Docker image to it, we need beforehand to : 
+- In order to be able to authenticate to the ECR registry and Push the Docker image to it, we need beforehand to : 
 - Install aws CLI on the EC2.
 - Configure aws credentials of the user on EC2.
 <img width="979" height="588" alt="5" src="https://github.com/user-attachments/assets/0b108746-c0ba-4f8e-a646-5eb8024848ea" />
@@ -152,29 +152,30 @@ Now that the Docker image was pushed successfully, let’s deploy the Applicatio
 
 <img width="1440" height="734" alt="1" src="https://github.com/user-attachments/assets/4a21dbd4-c05d-4f8d-9424-2a13453a7cb6" />
 
+<img width="1458" height="366" alt="2" src="https://github.com/user-attachments/assets/c5c1246c-850e-4819-8b6b-26b5e1ebad69" />
 
 - Specify the Cluster settings : 
 - Name it : **lab3-ecs-cluster**
 - Choose **FARGATE**
-
-<img width="1458" height="366" alt="2" src="https://github.com/user-attachments/assets/c5c1246c-850e-4819-8b6b-26b5e1ebad69" />
+<img width="1440" height="664" alt="3" src="https://github.com/user-attachments/assets/fad176db-6fc2-4653-aad7-09f641c728b8" />
 
 - Click **Create**
-<img width="1440" height="664" alt="3" src="https://github.com/user-attachments/assets/fad176db-6fc2-4653-aad7-09f641c728b8" />
+<img width="1215" height="357" alt="4" src="https://github.com/user-attachments/assets/838dd8b3-d194-4ea8-ac84-3e7f67bb88b9" />
+<img width="1437" height="331" alt="5" src="https://github.com/user-attachments/assets/d593738a-8b97-42a1-b025-59256548ea87" />
 
 **Step 9 : Create IAM Role for ECS**
 - Go to IAM → Roles → Create Role → select AWS service
-<img width="1215" height="357" alt="4" src="https://github.com/user-attachments/assets/838dd8b3-d194-4ea8-ac84-3e7f67bb88b9" />
+<img width="1424" height="483" alt="6" src="https://github.com/user-attachments/assets/fa44e3ec-0306-42ae-9076-d348616c9a15" />
 
 - In use case, choose : **Elastic Container Service Task**
-<img width="1437" height="331" alt="5" src="https://github.com/user-attachments/assets/d593738a-8b97-42a1-b025-59256548ea87" />
+<img width="1450" height="737" alt="7" src="https://github.com/user-attachments/assets/1058fd6e-585b-4977-887f-9739acd32141" />
 
 - Name the role : **ecsTaskExecutionRole**
-<img width="1424" height="483" alt="6" src="https://github.com/user-attachments/assets/fa44e3ec-0306-42ae-9076-d348616c9a15" />
+
 
 - Attach these policies: **AmazonECSTaskExecutionRolePolicy** and **CloudWatchLogsFullAccess**
 
-<img width="1450" height="737" alt="7" src="https://github.com/user-attachments/assets/1058fd6e-585b-4977-887f-9739acd32141" />
+
 
 - Click **Create role**
 <img width="1446" height="477" alt="8" src="https://github.com/user-attachments/assets/247235a8-04e2-43ee-aed6-a1a92701dff4" />
