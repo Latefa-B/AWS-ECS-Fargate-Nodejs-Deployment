@@ -171,35 +171,33 @@ Now that the Docker image was pushed successfully, let’s deploy the Applicatio
 <img width="1450" height="737" alt="7" src="https://github.com/user-attachments/assets/1058fd6e-585b-4977-887f-9739acd32141" />
 
 - Name the role : **ecsTaskExecutionRole**
-
+<img width="1446" height="477" alt="8" src="https://github.com/user-attachments/assets/247235a8-04e2-43ee-aed6-a1a92701dff4" />
 
 - Attach these policies: **AmazonECSTaskExecutionRolePolicy** and **CloudWatchLogsFullAccess**
-<img width="1446" height="477" alt="8" src="https://github.com/user-attachments/assets/247235a8-04e2-43ee-aed6-a1a92701dff4" />
+<img width="1456" height="717" alt="9" src="https://github.com/user-attachments/assets/c8bad476-daf9-4b01-b594-57773b638cfa" />
 
 
 - Click **Create role**
-<img width="1456" height="717" alt="9" src="https://github.com/user-attachments/assets/c8bad476-daf9-4b01-b594-57773b638cfa" />
 <img width="1437" height="687" alt="10" src="https://github.com/user-attachments/assets/a79dc1d5-9767-4125-80c5-0079b5cc12d7" />
-
-
-
-
-
 
 
 **Step 10 : Register Task Definition**
 - Go to ECS → Task Definitions → Click **Create new task definition**
+<img width="1437" height="379" alt="11" src="https://github.com/user-attachments/assets/438cfbe6-cb9a-42a0-8848-596f9f290382" />
 
 - Specify the task definition settings : 
 - Name: **lab3-task**
 - Select Launch Type: **FARGATE**
+<img width="1439" height="535" alt="12" src="https://github.com/user-attachments/assets/192ee18e-b49e-43eb-82d5-47586f86d5b1" />
 
 - Specify the task execution role previously created : **ecsTaskExecutionRole**
+<img width="1344" height="746" alt="13" src="https://github.com/user-attachments/assets/8d833603-f624-45d2-8f9a-6a8bc18955d3" />
 
 - Add Container :
 - Name: **aws-node-app-lab3**
 - Image: **<your-ecr-url>/aws-node-app-lab3:latest**
 - Port: **3000**
+<img width="1345" height="773" alt="14" src="https://github.com/user-attachments/assets/44fcbb08-3a3a-4962-9b2f-eaec2756e9de" />
 
 - Enable Logging : **check Log Collection**
 - Specify : **Amazon Cloudwatch**
@@ -208,76 +206,57 @@ Now that the Docker image was pushed successfully, let’s deploy the Applicatio
 - Log group: **/ecs/lab3-logs**
 - Region: **us-east-1**
 - Prefix: **ecs**
-
+<img width="1450" height="663" alt="15" src="https://github.com/user-attachments/assets/b34b4b12-f7b3-4bef-9a64-f5424baa22db" />
 
 - Leave other settings as default
-
+<img width="1440" height="729" alt="16" src="https://github.com/user-attachments/assets/aaab2913-0456-44da-8bba-348697ad3d6b" />
 
 - Click **Create**
-
-
-
-
-
+<img width="1441" height="669" alt="17" src="https://github.com/user-attachments/assets/4e8c40ff-4f9e-4da7-9634-f9aeb951adf3" />
 
 **Step 11: Create ECS Service**
 - Go to ECS → Clusters → select your cluster : **lab3-ecs-cluster**  → Services 
 - Click **Create** 
+<img width="1447" height="689" alt="18" src="https://github.com/user-attachments/assets/47c87579-70ad-4b65-bfea-1c94f71735ae" />
 
 - Specify the service settings : 
 - Select Task Definition family : **lab3-task**
 - Task Definition revision : **1**
 - Service Name: **lab3-service**
+<img width="1430" height="504" alt="19" src="https://github.com/user-attachments/assets/bbc14b72-1601-4333-8f9f-9444dddb4328" />
 
 - Specify the environment settings : 
 - Launch Type: **FARGATE**
 - Platform version : **LATEST**
+<img width="1433" height="571" alt="20" src="https://github.com/user-attachments/assets/24d972fa-f1b6-4f1b-aec4-243fc277bda8" />
 
 - Desired Count: **1**
+<img width="1443" height="658" alt="21" src="https://github.com/user-attachments/assets/8229218d-d4b7-4498-b001-d7381c43fd56" />
 
 - Specify the Network settings :
 - Use default VPC
 - Select public subnets
 - Use an existing security group or create a new one
 - Turn On public IP
-
+<img width="1443" height="745" alt="22" src="https://github.com/user-attachments/assets/c5ff4ccf-3c2a-4d12-bee2-b8544d2989c8" />
 
 - Leave other settings as default
-
-
-
-
-
-
+<img width="1437" height="732" alt="23" src="https://github.com/user-attachments/assets/e7bcea43-dfa6-4829-b5bb-efac7b3b2758" />
 
 - Click **Create**
-<img width="1437" height="379" alt="11" src="https://github.com/user-attachments/assets/438cfbe6-cb9a-42a0-8848-596f9f290382" />
-<img width="1439" height="535" alt="12" src="https://github.com/user-attachments/assets/192ee18e-b49e-43eb-82d5-47586f86d5b1" />
-<img width="1344" height="746" alt="13" src="https://github.com/user-attachments/assets/8d833603-f624-45d2-8f9a-6a8bc18955d3" />
-<img width="1345" height="773" alt="14" src="https://github.com/user-attachments/assets/44fcbb08-3a3a-4962-9b2f-eaec2756e9de" />
-<img width="1450" height="663" alt="15" src="https://github.com/user-attachments/assets/b34b4b12-f7b3-4bef-9a64-f5424baa22db" />
-<img width="1440" height="729" alt="16" src="https://github.com/user-attachments/assets/aaab2913-0456-44da-8bba-348697ad3d6b" />
-<img width="1441" height="669" alt="17" src="https://github.com/user-attachments/assets/4e8c40ff-4f9e-4da7-9634-f9aeb951adf3" />
-<img width="1447" height="689" alt="18" src="https://github.com/user-attachments/assets/47c87579-70ad-4b65-bfea-1c94f71735ae" />
-<img width="1430" height="504" alt="19" src="https://github.com/user-attachments/assets/bbc14b72-1601-4333-8f9f-9444dddb4328" />
-
-
-
-<img width="1433" height="571" alt="20" src="https://github.com/user-attachments/assets/24d972fa-f1b6-4f1b-aec4-243fc277bda8" />
-
-<img width="1443" height="658" alt="21" src="https://github.com/user-attachments/assets/8229218d-d4b7-4498-b001-d7381c43fd56" />
-<img width="1443" height="745" alt="22" src="https://github.com/user-attachments/assets/c5ff4ccf-3c2a-4d12-bee2-b8544d2989c8" />
-<img width="1437" height="732" alt="23" src="https://github.com/user-attachments/assets/e7bcea43-dfa6-4829-b5bb-efac7b3b2758" />
 <img width="1364" height="643" alt="24" src="https://github.com/user-attachments/assets/84cf525f-34d6-401a-88b2-e684b4917c59" />
-
 
 ## Phase 5: Monitor & Test
 **Step 12: Check Logs in CloudWatch**
 - Go to CloudWatch → Log groups → /ecs/lab3-logs
+<img width="1438" height="460" alt="1" src="https://github.com/user-attachments/assets/71fba89b-0978-4fc5-baf9-8e13dee98eff" />
+
 
 - Click on  /ecs/lab3-logs and check the last log stream
+<img width="1433" height="492" alt="2" src="https://github.com/user-attachments/assets/14a19e22-c325-460e-bb28-ddbf3205354c" />
 
 **Expected output** : You should see log output : App running on port 3000
+<img width="1429" height="396" alt="3" src="https://github.com/user-attachments/assets/23157252-f487-4f3c-8d04-d5f46714b6b2" />
 
 
 **Step 13: Configure Security Groups on Port 3000 before testing the application**
@@ -287,45 +266,34 @@ Now that we are done deploying the application, the last step before testing the
 - Go to EC2 Dashboard → instances →  your EC2 instance → security → Click security groups → Inbound rules → Click Edit inbound rules.
 - Add rule Custom TCP on Port 3000 to allow traffic on that port.
 - Click save rules.
+<img width="1422" height="594" alt="4" src="https://github.com/user-attachments/assets/0644331b-eb60-4a17-8d3e-be2cce105dfa" />
 
 
 
 **- ECS Task  security group :** 
 Go to ECS Dashboard → Clusters → select your cluster : lab3-ecs-cluster → Tasks → your task name → Networking → Click on the security group associated with your ECS task.
+<img width="1428" height="536" alt="5" src="https://github.com/user-attachments/assets/e3299735-aac6-4745-810c-1e75fc6464a3" />
 
 
 
 - On Inbound rules → Click Edit inbound rules → Click Add rule.
 - Add rule Custom TCP on Port 3000 to allow traffic on that port.
 - Click save rules.
+<img width="1424" height="599" alt="6" src="https://github.com/user-attachments/assets/cbc9aea8-c826-4e77-9fee-00a3a503f500" />
 
 
 
 **Step 14 : Access the App in the Web Browser**
 - Go to ECS → Clusters →  select your cluster →  Tasks →  Click your running task 
+<img width="1412" height="696" alt="7" src="https://github.com/user-attachments/assets/f8af13b5-39a3-4366-a031-b706f46e49f3" />
 
 - Inside the running task, Configuration →  Get Public IP Address.
 
 - Open: http://<public-ip>:3000
 - Test the application. The Expected Output is : **Hello from AWS Lab 3!**
+<img width="1316" height="323" alt="8" src="https://github.com/user-attachments/assets/30fb47b8-6adf-435b-89e1-c34e6c6f034a" />
 
 
-
-<img width="1438" height="460" alt="1" src="https://github.com/user-attachments/assets/b8e3e27c-5a71-4a4b-9a94-0549cce6d866" />
-
-<img width="1433" height="492" alt="2" src="https://github.com/user-attachments/assets/829f22c9-e0b1-4eba-85cd-0af924c642ff" />
-
-<img width="1429" height="396" alt="3" src="https://github.com/user-attachments/assets/983615ec-863a-404c-9aa3-5cb82552ca48" />
-
-<img width="1422" height="594" alt="4" src="https://github.com/user-attachments/assets/6383b447-6976-4f07-b4b5-bbd73bccf023" />
-
-<img width="1428" height="536" alt="5" src="https://github.com/user-attachments/assets/992ebbbb-ede7-41fd-9741-4d7c76061ded" />
-
-<img width="1424" height="599" alt="6" src="https://github.com/user-attachments/assets/1201c20a-151c-45c0-882e-ac33bdc65a55" />
-
-<img width="1412" height="696" alt="7" src="https://github.com/user-attachments/assets/c2865bdc-9da4-4fbc-a631-d2a139af869e" />
-
-<img width="1316" height="323" alt="8" src="https://github.com/user-attachments/assets/e88c557f-7341-4beb-a746-7f92ecb131b5" />
 
 ## Summary
 This breakdown provides a step-by-step guide on how to deploy a basic node.js application using the AWS services: 
